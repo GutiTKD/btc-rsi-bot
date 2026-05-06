@@ -49,11 +49,9 @@ def get_rsi() -> tuple[float, float]:
     Descarga velas de BTC/USDT desde Binance y calcula el RSI.
     Retorna (rsi_actual, precio_actual).
     """
-    url = "https://api.binance.com/api/v3/klines"
+    url = "https://api.coingecko.com/api/v3/coins/bitcoin/ohlc"
     params = {
-        "symbol": "BTCUSDT",
-        "interval": TIMEFRAME,
-        "limit": CANDLES,
+        "vs_currency": "usd", "days": 1"
     }
     r = requests.get(url, params=params, timeout=10)
     r.raise_for_status()
