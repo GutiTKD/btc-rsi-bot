@@ -22,8 +22,8 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 # ─────────────────────────────────────────────
 #  CONFIGURACIÓN  (edita estos valores)
 # ─────────────────────────────────────────────
-BOT_TOKEN  = "TU_TOKEN_AQUI"       # Token de @BotFather
-CHAT_ID    = "TU_CHAT_ID_AQUI"     # Tu chat ID (usa /start para verlo)
+BOT_TOKEN  = os.environ.get("7795736140:AAHDondXqsAKh6OQ8H8q9QHE5DOsWyaAck8")       # Token de @BotFather
+CHAT_ID    = os.environ.get("1589330152")     # Tu chat ID (usa /start para verlo)
 
 RSI_PERIOD      = 14        # Período del RSI (estándar = 14)
 RSI_OVERSOLD    = 30        # Nivel de sobreventa  → señal de COMPRA
